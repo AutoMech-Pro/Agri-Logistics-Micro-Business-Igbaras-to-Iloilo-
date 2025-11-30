@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Logistics Business Plan: Igbaras, Iloilo (Nov 2025)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Palette Selection: "Vibrant Growth" - Emerald Green & High-Energy Orange -->
+    <!-- 
+        Palette Hex Codes:
+        Primary: #047857 (Emerald 700)
+        Accent: #f97316 (Orange 500)
+        Neutral: #f3f4f6 (Gray 100)
+        Text Dark: #111827 (Gray 900)
+        
+        NO SVG USED. NO MERMAID JS USED.
+    -->
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            color: #111827;
+        }
+
+        /* Chart Container Styling - MANDATORY */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            /* Height Controls */
+            height: 300px; 
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+
+        /* Specific Max Widths per section usage */
+        .chart-max-lg { max-width: 800px; }
+        .chart-max-md { max-width: 600px; }
+
+        /* Custom Utilities */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .section-header {
+            border-left: 5px solid #f97316;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Diagram Connectors for Process Flow */
+        .step-connector::after {
+            content: '⬇';
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #9ca3af;
+            margin: 0.5rem 0;
+        }
+        @media (min-width: 768px) {
+            .step-connector::after {
+                content: '➜';
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-[#047857] text-white py-12 px-4 shadow-lg">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Agri-Logistics Micro-Business</h1>
+            <h2 class="text-xl md:text-2xl font-light text-green-100">Strategic Roadmap: Igbaras to Iloilo City</h2>
+            <div class="mt-6 inline-block bg-[#f97316] text-white font-bold py-2 px-6 rounded-full shadow-md">
+                24-36 Month ROI Horizon
+            </div>
+            <p class="mt-4 text-sm text-green-200 opacity-80">Updated: November 2025</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- INTRO & SNAPSHOT -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 bg-white rounded-lg p-8 card-shadow">
+                <div class="section-header">
+                    <h3 class="text-2xl font-bold text-[#047857]">Executive Summary</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Igbaras, located in the southwestern part of Iloilo, remains a vital vegetable basket for the province. As of late 2025, logistics constraints continue to hinder small-scale farmers from maximizing profit margins at the major trading centers.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    This updated business model proposes a specialized <strong>Agri-Logistics Service</strong>. By utilizing an insulated van, the business minimizes post-harvest losses (currently estimated at 18-22% in traditional jeepney transport) and connects the highlands directly to the Iloilo Terminal Market ("Super") and institutional buyers.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Big Number 1 -->
+                <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-[#f97316]">
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wide">Estimated Capital</div>
+                    <div class="text-3xl font-bold text-gray-800">₱800k - 1.2M</div>
+                    <div class="text-xs text-green-600 mt-1">Market rates Q4 2025</div>
+                </div>
+                <!-- Big Number 2 -->
+                <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-[#047857]">
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wide">Primary Asset</div>
+                    <div class="text-3xl font-bold text-gray-800">L300 / H-100</div>
+                    <div class="text-xs text-green-600 mt-1">Insulated Box Retrofit</div>
+                </div>
+                <!-- Big Number 3 -->
+                <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-blue-500">
+                    <div class="text-sm text-gray-500 font-bold uppercase tracking-wide">ROI Timeline</div>
+                    <div class="text-3xl font-bold text-gray-800">24-36 Mos.</div>
+                    <div class="text-xs text-green-600 mt-1">Based on Nov '25 Fuel Prices</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPITAL ALLOCATION -->
+        <section>
+            <div class="max-w-4xl mx-auto">
+                <div class="section-header">
+                    <h3 class="text-2xl font-bold text-[#047857]">Capital Allocation Strategy</h3>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Starting operations in late 2025 requires coping with slightly higher vehicle acquisition costs compared to previous years. The allocation below prioritizes asset reliability to prevent downtime on the mountainous Igbaras terrain.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-lg card-shadow">
+                    <!-- Chart Container -->
+                    <div class="w-full">
+                        <div class="chart-container chart-max-md">
+                            <canvas id="capitalChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Context Text -->
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Investment Breakdown</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#047857] mr-2">●</span>
+                                <span class="text-sm text-gray-600"><strong>Vehicle Acquisition (65%):</strong> Purchase of a reliable Euro-4 compliant unit or high-quality second-hand van.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f97316] mr-2">●</span>
+                                <span class="text-sm text-gray-600"><strong>Refurbishment (15%):</strong> Installation of food-grade insulation to maintain vegetable freshness during the 1.5-hour transit.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">●</span>
+                                <span class="text-sm text-gray-600"><strong>Working Capital (12%):</strong> Fuel, driver salary, and toll fees buffer for the first 90 days.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI TRAJECTORY -->
+        <section>
+            <div class="section-header">
+                <h3 class="text-2xl font-bold text-[#047857]">Financial Projection (2025-2028)</h3>
+            </div>
+            <p class="text-gray-600 mb-6 max-w-3xl">
+                The "Valley of Death" in agri-logistics is the initial operational phase where client routes are being established. The chart below illustrates the cumulative cash flow, projecting a break-even point between Month 24 and Month 30 assuming consistent trips.
+            </p>
+
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <div class="chart-container chart-max-lg mx-auto">
+                    <canvas id="roiChart"></canvas>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500 italic">
+                    Projection assumes 85% load utilization by Year 2 and adjusts for Q4 2025 inflation rates.
+                </div>
+            </div>
+        </section>
+
+        <!-- COST DRIVERS & PROCESS FLOW GRID -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- COST DRIVERS -->
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <div class="section-header">
+                    <h3 class="text-xl font-bold text-[#047857]">Monthly OpEx Drivers</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">
+                    Based on November 2025 diesel prices in Panay, fuel remains the dominant variable cost, followed closely by skilled driver retention.
+                </p>
+                <div class="chart-container">
+                    <canvas id="costChart"></canvas>
+                </div>
+            </div>
+
+            <!-- PROCESS FLOW -->
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <div class="section-header">
+                    <h3 class="text-xl font-bold text-[#047857]">Operational Workflow</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-6">
+                    Streamlined operations reduce dwell time and preserve crop quality.
+                </p>
+                
+                <div class="flex flex-col h-full justify-center space-y-2">
+                    <!-- Step 1 -->
+                    <div class="flex items-center p-3 bg-green-50 border-l-4 border-green-600 rounded">
+                        <div class="text-2xl mr-4">🚜</div>
+                        <div>
+                            <div class="font-bold text-gray-800">Farm Gate Collection</div>
+                            <div class="text-xs text-gray-500">Igbaras Highlands</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center text-gray-400 text-xl font-bold">⬇</div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-center p-3 bg-orange-50 border-l-4 border-orange-500 rounded">
+                        <div class="text-2xl mr-4">📦</div>
+                        <div>
+                            <div class="font-bold text-gray-800">Sorting & Loading</div>
+                            <div class="text-xs text-gray-500">Quality Check & Crate Packing</div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-gray-400 text-xl font-bold">⬇</div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-center p-3 bg-blue-50 border-l-4 border-blue-500 rounded">
+                        <div class="text-2xl mr-4">🚚</div>
+                        <div>
+                            <div class="font-bold text-gray-800">Transport Logistics</div>
+                            <div class="text-xs text-gray-500">Igbaras to Iloilo City (via San Miguel/Oton)</div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-gray-400 text-xl font-bold">⬇</div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-center p-3 bg-indigo-50 border-l-4 border-indigo-600 rounded">
+                        <div class="text-2xl mr-4">🏙️</div>
+                        <div>
+                            <div class="font-bold text-gray-800">Market Distribution</div>
+                            <div class="text-xs text-gray-500">Terminal Market / Institutional Buyers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SWOT ANALYSIS -->
+        <section>
+            <div class="section-header">
+                <h3 class="text-2xl font-bold text-[#047857]">Strategic SWOT Analysis (Nov 2025)</h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+                A localized analysis of the internal and external factors affecting an agri-logistics business in the current Iloilo economic landscape.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Strengths -->
+                <div class="bg-white p-6 rounded-lg border-t-4 border-green-500 shadow-md">
+                    <h4 class="font-bold text-green-700 mb-3 flex items-center"><span class="text-xl mr-2">💪</span> Strengths</h4>
+                    <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                        <li>Direct access to high-value crop sources in Igbaras.</li>
+                        <li>Operational agility compared to large logistics fleets.</li>
+                        <li>Capacity for "last-mile" pickup on narrow barangay roads.</li>
+                    </ul>
+                </div>
+
+                <!-- Weaknesses -->
+                <div class="bg-white p-6 rounded-lg border-t-4 border-orange-400 shadow-md">
+                    <h4 class="font-bold text-orange-600 mb-3 flex items-center"><span class="text-xl mr-2">📉</span> Weaknesses</h4>
+                    <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                        <li>Single-asset dependency (breakdown risk).</li>
+                        <li>Volume cap per trip (1.5 - 2 tons) vs 6-wheelers.</li>
+                        <li>Initial lack of brand trust with major Iloilo buyers.</li>
+                    </ul>
+                </div>
+
+                <!-- Opportunities -->
+                <div class="bg-white p-6 rounded-lg border-t-4 border-blue-500 shadow-md">
+                    <h4 class="font-bold text-blue-700 mb-3 flex items-center"><span class="text-xl mr-2">🚀</span> Opportunities</h4>
+                    <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                        <li><strong>Back-load Revenue:</strong> Carrying construction supplies or feeds from City to Igbaras on return trips.</li>
+                        <li>Expanding to "Pabili" services for highland communities.</li>
+                        <li>Direct-to-Consumer (DTC) delivery boxes for city residents.</li>
+                    </ul>
+                </div>
+
+                <!-- Threats -->
+                <div class="bg-white p-6 rounded-lg border-t-4 border-red-500 shadow-md">
+                    <h4 class="font-bold text-red-700 mb-3 flex items-center"><span class="text-xl mr-2">⚠️</span> Threats</h4>
+                    <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                        <li>Volatility in global oil prices affecting local diesel rates.</li>
+                        <li>Extreme weather events (La Niña/El Niño cycles) disrupting harvest.</li>
+                        <li>Aggressive pricing from informal "colorum" transporters.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#111827] text-gray-400 py-8 text-center mt-12">
+        <p class="text-sm font-semibold">Agri-Logistics Micro-Business Plan</p>
+        <p class="text-xs mt-2">Data estimates are based on general market conditions in Iloilo as of November 2025.</p>
+    </footer>
+
+    <script>
+        // --- 1. Helper Functions ---
+        
+        // Function to split long labels for Chart.js (Max 16 chars per line)
+        function splitLabel(str) {
+            if (str.length <= 16) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= 16) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Shared Tooltip Configuration
+        const sharedTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- 2. Chart.js Implementations ---
+
+        // CAPITAL ALLOCATION CHART (Donut)
+        const ctxCapital = document.getElementById('capitalChart').getContext('2d');
+        const capitalLabels = [
+            "Vehicle Acquisition (Used/Downpayment)", 
+            "Refurbishment (Insulated Box)", 
+            "Operational Buffer", 
+            "Permits & Legal"
+        ].map(splitLabel);
+
+        new Chart(ctxCapital, {
+            type: 'doughnut',
+            data: {
+                labels: capitalLabels,
+                datasets: [{
+                    data: [65, 15, 12, 8],
+                    backgroundColor: ['#047857', '#f97316', '#3b82f6', '#9ca3af'],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { boxWidth: 15, font: { size: 11 } }
+                    },
+                    title: {
+                        display: false,
+                    },
+                    tooltip: sharedTooltipConfig
+                }
+            }
+        });
+
+        // ROI TRAJECTORY CHART (Line)
+        const ctxRoi = document.getElementById('roiChart').getContext('2d');
+        const roiLabels = ["Nov '25", "May '26", "Nov '26", "May '27", "Nov '27", "May '28", "Nov '28"];
+        
+        new Chart(ctxRoi, {
+            type: 'line',
+            data: {
+                labels: roiLabels,
+                datasets: [{
+                    label: 'Cumulative Cash Flow (PHP)',
+                    data: [-1000000, -900000, -650000, -350000, 0, 450000, 950000],
+                    borderColor: '#047857',
+                    backgroundColor: 'rgba(4, 120, 87, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#f97316',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: true },
+                    tooltip: sharedTooltipConfig
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value) {
+                                return '₱' + value / 1000 + 'k';
+                            }
+                        },
+                        grid: { color: '#e5e7eb' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // COST DRIVERS (Horizontal Bar)
+        const ctxCost = document.getElementById('costChart').getContext('2d');
+        const costLabels = [
+            "Fuel & Oil (Variable)",
+            "Driver Salary & Benefits",
+            "Preventive Maintenance & Repairs",
+            "Vehicle Depreciation",
+            "Misc & Contingency"
+        ].map(splitLabel);
+
+        new Chart(ctxCost, {
+            type: 'bar',
+            data: {
+                labels: costLabels,
+                datasets: [{
+                    label: 'Monthly Expense %',
+                    data: [42, 23, 15, 10, 10], // Adjusted slightly for 2025 fuel impact
+                    backgroundColor: [
+                        '#ef4444', // Fuel (High alert)
+                        '#3b82f6', // Salary
+                        '#f59e0b', // Maint
+                        '#9ca3af', // Depr
+                        '#10b981'  // Misc
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: sharedTooltipConfig
+                },
+                scales: {
+                    x: {
+                        max: 50,
+                        ticks: { callback: function(value) { return value + '%' } }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
